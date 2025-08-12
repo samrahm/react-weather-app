@@ -82,7 +82,7 @@ react-weather-app/
 - [React Context API](https://react.dev/reference/react/useContext) (for state management)
 - CSS/SCSS Modules (for styling)
 
-## Modifications
+  ## Modifications
 
 - 📍 **Geolocation:** Optionally detect and display weather for your current location.
 - 🌡️ **Temperature Units:** Toggle between Celsius and Fahrenheit.
