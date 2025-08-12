@@ -11,7 +11,7 @@ A simple and modern weather application built with React. This app allows users 
 
 ## Demo
 
-![Weather App Screenshot](./screenshot.png)
+![Weather App Screenshot](./src/assets/screenshot.png)
 
 ## Getting Started
 
@@ -77,6 +77,12 @@ react-weather-app/
 - [OpenWeatherMap API](https://openweathermap.org/api)
 - [React Context API](https://react.dev/reference/react/useContext) (for state management)
 - CSS/SCSS Modules (for styling)
+
+  ## Modifications
+
+- 📍 **Geolocation:** Optionally detect and display weather for your current location.
+- 🌡️ **Temperature Units:** Toggle between Celsius and Fahrenheit.
+
 
 ## Contributing
 
