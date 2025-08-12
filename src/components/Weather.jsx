@@ -14,6 +14,7 @@ import rain_icon from "../assets/rain.png"
 import snow_icon from "../assets/snow.png"
 
 const Weather = () => {
+  const [city, setCity] = useState("Islamabad"); 
   const inputRef = useRef();
   const [weatherData, setWeatherData] = useState("false");
 
@@ -68,8 +69,13 @@ const Weather = () => {
   };
 
   useEffect(() => {
-    search("Islamabad");
+    search(city);
   }, []);
+
+    const handleInputChange = (e) => {
+      e.preventDefault();
+      setCity(e.target.value);
+  };
 
 
   return (
@@ -80,12 +86,13 @@ const Weather = () => {
             className='input-field'
             type="text"
             placeholder="Enter city name"
+            value={city}
+            onChange={handleInputChange}
           />
-        <button className='search-button' alt="" onClick={()=>{search(inputRef.current.value)}}>🔍︎</button>
+          <button className='search-button' alt="" onClick={()=>{search(inputRef.current.value)}}>🔍︎</button>
       </div>
-      {/* {weatherData ? ( */}
         <>
-          <h2>{inputRef.current.value} Weather Forecast</h2>
+          <h2>{city} Weather Forecast</h2>
           <div className='info-grid'>
             <div className='temp card'>
               {/* <div className='weather-icon'><WiDaySunny size="150px"/></div> */}
@@ -135,9 +142,6 @@ const Weather = () => {
             </div>            
           </div>
         </>
-      {/* ) : (
-        <p>Loading weather data...</p>
-      )} */}
     </div>
   );
 };
