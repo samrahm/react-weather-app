@@ -37,6 +37,23 @@ const Weather = () => {
     "50d" : haze_icon
   }
 
+  // let lat, lon;
+  // // get geolocation
+  // if (navigator.geolocation) {
+  //   navigator.geolocation.getCurrentPosition(
+  //       (position) => {
+  //           lat = position.coords.latitude;
+  //           lon = position.coords.longitude;
+  //           console.log(lat + ' ' + lon)
+  //       },
+  //       (error) => {
+  //           console.error("Error getting location:", error);
+  //       }
+  //   );
+  // } else {
+  //     console.error("Geolocation is not supported by this browser.");
+  // }
+
   const search = async (city) => {
     if(city === "") {
       alert("Enter city name");
@@ -44,7 +61,7 @@ const Weather = () => {
     }
     try {
       const url = 
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=15020a0157711c5f590d10069b4322a6`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=15020a0157711c5f590d10069b4322a6`
       ;
       const response = await fetch(url);
       const data = await response.json();
@@ -72,7 +89,7 @@ const Weather = () => {
     search(city);
   }, []);
 
-    const handleInputChange = (e) => {
+  const handleInputChange = (e) => {
       e.preventDefault();
       setCity(e.target.value);
   };
