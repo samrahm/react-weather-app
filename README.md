@@ -1,6 +1,7 @@
 # React Weather App
 
 A simple and modern weather application built with React. This app allows users to search for current weather conditions in any city worldwide using real-time data from a public weather API.
+Deployed on https://myweatherappl.netlify.app/ (check it out)
 
 ## Features
 
