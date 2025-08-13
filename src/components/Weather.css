@@ -109,3 +109,74 @@ svg {
     width: 3rem;
     height: auto;
 }
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+  .weather-app {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  .input-field {
+    width: 100%;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 10px;
+    line-height: 2.5rem;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 0.75rem 0;
+    font-size: 1.2rem;
+  }
+
+  .weather-app h2 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .info-grid {
+    flex-direction: column;
+    margin: 1rem 0;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .temp {
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+
+  .wicon {
+    width: 120px;
+  }
+
+  .grid {
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .row-card {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  .g-col-6 {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.25rem;
+  }
+
+  svg {
+    width: 2rem;
+  }
+}
