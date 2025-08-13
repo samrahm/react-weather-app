@@ -69,10 +69,10 @@ const Weather = () => {
       const icon = allIcons[data.weather[0].icon] || clear_icon;
       setWeatherData({
         humidity : data.main.humidity,
-        feels_like : data.main.feels_like, 
+        feels_like : Math.floor(data.main.feels_like - 273.15), 
         description: data.weather[0].description,
         windSpeed : data.wind.speed,
-        temperature : Math.floor(data.main.temp_min),
+        temperature : Math.floor(data.main.temp_min - 273.15),
         location : data.name,
         pressure : data.main.pressure,
         sunrise: data.sys.sunrise,
